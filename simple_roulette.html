@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Roleta Simples{% endblock %}
+
+{% block content %}
+    <h2>Roleta Simples (Aposta Par ou Ímpar)</h2>
+    
+    <p>Seu Saldo Atual: <strong>R$ {{ current_user.saldo|round(2) }}</strong></p>
+    
+    <hr>
+    
+    <form method="POST" action="{{ url_for('simple_roulette') }}">
+        
+        <div>
+            <label>Sua Escolha (Pagamento 1:1):</label><br>
+            <input type="radio" id="par" name="escolha" value="par" required>
+            <label for="par">Par (2, 4, 6...)</label>
+            <p style="display:inline-block; margin: 0 10px;">|</p>
+            <input type="radio" id="impar" name="escolha" value="impar">
+            <label for="impar">Ímpar (1, 3, 5...)</label>
+            <p style="margin-top: 10px; color: grey; font-size: 0.9em;">Atenção: O número **0** resulta em perda da aposta.</p>
+        </div>
+        
+        <div>
+            <label for="aposta">Valor da Aposta (R$):</label>
+            <input type="number" step="0.01" min="0.01" id="aposta" name="aposta" required>
+        </div>
+        
+        <button type="submit">Girar Roleta!</button>
+    </form>
+    
+    <hr>
+
+    {% if resultado_jogo %}
+        <h3>Resultado do Giro:</h3>
+        <p style="font-size: 1.5em; font-weight: bold; background-color: #eee; padding: 10px; display: inline-block;">
+            O número sorteado foi: 
+            {% if resultado_jogo.lancamento == 0 %}
+                <span style="color: green;">{{ resultado_jogo.lancamento }}</span>
+            {% elif resultado_jogo.lancamento % 2 == 0 %}
+                <span style="color: black;">{{ resultado_jogo.lancamento }}</span>
+            {% else %}
+                <span style="color: red;">{{ resultado_jogo.lancamento }}</span>
+            {% endif %}
+        </p>
+        
+        {% if resultado_jogo.vitoria %}
+            <p style="color: green; font-weight: bold;">🎉 VOCÊ GANHOU!</p>
+        {% else %}
+            <p style="color: red; font-weight: bold;">😢 VOCÊ PERDEU!</p>
+        {% endif %}
+        
+        <p>Seu novo saldo é R$ {{ current_user.saldo|round(2) }}.</p>
+    {% endif %}
+
+{% endblock %}
