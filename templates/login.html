@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}Cadastro{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
-    <h2>Criar Nova Conta</h2>
+<link rel="stylesheet" href="/static/style.css">
+    <h2>Acessar sua Conta</h2>
     
-    <form method="POST" action="{{ url_for('cadastro') }}">
+    <form method="POST" action="{{ url_for('login') }}">
         <div>
             <label for="username">Nome de Usuário:</label>
             <input type="text" id="username" name="username" required>
@@ -16,8 +17,8 @@
             <input type="password" id="password" name="password" required>
         </div>
         
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Entrar</button>
     </form>
     
-    <p>Já tem conta? <a href="{{ url_for('login') }}">Faça o login</a>.</p>
+    <p>Ainda não tem conta? <a href="{{ url_for('cadastro') }}">Crie uma aqui</a>.</p>
 {% endblock %}
