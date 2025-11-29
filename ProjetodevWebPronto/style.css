@@ -1,0 +1,814 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #F5C542;
+    color: rgb(234, 0, 255);
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #1A1A1A;      
+    border: 1px solid #FFD70033;    
+    border-radius: 12px;
+    box-shadow: 0 0 15px #000000aa; 
+
+
+
+}
+
+#dataForm input[type="number"],
+#dataForm button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#dataForm button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#resultado {
+    text-align: left;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 4px;
+    white-space: pre-wrap; 
+}
+
+/* --------CSS DO CADASTRO--------*/
+
+body {
+    background-color: #0D0D0D;
+    color: #E0E0E0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.cadastro_titulo h2 {
+    text-align: center;
+    color: #FFD700;   
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #FFD700; 
+}
+
+.cadastro_titulo,
+.cadastro_login {
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+
+.cadastro_username,
+.cadastro_senha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+.cadastro_username label,
+.cadastro_senha label {
+    width: 150px;
+    text-align: right;
+    color: #FFD700;   
+}
+
+
+
+.cadastro_username input,
+.cadastro_senha input {
+    width: 220px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #FFD700;  
+    background-color: #1A1A1A; 
+    color: #FFFFFF;
+    box-shadow: 0 0 8px #FFD70044;  
+}
+
+.cadastro_username input:focus,
+.cadastro_senha input:focus {
+    outline: none;
+    border-color: #FFE55C;   
+    box-shadow: 0 0 10px #FFE55C;  
+}
+
+
+
+.cadastro_login a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cadastro_login a:hover {
+    color: #FFE55C;
+    text-shadow: 0 0 8px #FFE55C;
+}
+
+
+
+.botao_cadastro {
+    background: linear-gradient(135deg, #FFF6A9, #FFD700, #E6B500, #FFD700);
+    color: #0D0D0D;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 12px #FFD700;
+    transition: 0.3s;
+}
+
+.botao_cadastro:hover {
+    background: linear-gradient(135deg, #FFF9C4, #FFE55C, #FFC107, #FFE55C);
+    box-shadow: 0 0 18px #FFE55C;
+    transition: 0.4s;
+}
+
+
+
+/*------ CSS DE LOGIN --------*/
+
+
+.login_titulo {
+    text-align: center;
+    color: #FFD700;   
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.login,
+.senha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login label,
+.senha label {
+    width: 150px;
+    text-align: right;
+    color: #FFD700;   
+}
+
+
+.login input,
+.senha input {
+    width: 220px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #FFD700;  
+    background-color: #1A1A1A;  
+    color: #FFFFFF;
+    box-shadow: 0 0 8px #FFD70044;  
+}
+
+.logininput:focus,
+.senha input:focus {
+    outline: none;
+    border-color: #FFE55C;   
+    box-shadow: 0 0 10px #FFE55C;  
+}
+
+
+.iniciar_cadastro a{
+
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.iniciar_cadastro a:hover {
+    color: #FFE55C;
+    text-shadow: 0 0 8px #FFE55C;
+}
+
+
+.botao_entrar{
+
+    background: linear-gradient(135deg, #FFF6A9, #FFD700, #E6B500, #FFD700);
+    color: #0D0D0D;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 12px #FFD700;
+    transition: 0.3s;
+}
+
+.botao_entrar:hover {
+    
+    background: linear-gradient(135deg, #FFF9C4, #FFE55C, #FFC107, #FFE55C);
+    box-shadow: 0 0 18px #FFE55C;
+    transition: 0.4s;
+}
+
+
+/* -------- CSS INDEX --------*/
+
+.bemvindo {
+
+    text-align: center;
+    color: #FFD700;   
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.criar{
+   
+    color: #D4AF37; 
+
+}
+
+.fazer_login{
+
+    background: linear-gradient(135deg, #FFF6A9, #FFD700, #E6B500, #FFD700);
+    color: #0D0D0D;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 12px #FFD700;
+    transition: 0.3s;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-top: 20px ;
+}
+
+.fazer_cadastro{
+
+    background: linear-gradient(135deg, #FFF6A9, #FFD700, #E6B500, #FFD700);
+    color: #0D0D0D;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 12px #FFD700;
+    transition: 0.3s;
+    text-decoration: none;
+    margin-top: 20px ;
+}
+
+.fazer_login:hover {
+    
+    background: linear-gradient(135deg, #FFF9C4, #FFE55C, #FFC107, #FFE55C);
+    box-shadow: 0 0 18px #FFE55C;
+    transition: 0.4s;
+}
+
+.fazer_cadastro:hover{
+
+    background: linear-gradient(135deg, #FFF9C4, #FFE55C, #FFC107, #FFE55C);
+    box-shadow: 0 0 18px #FFE55C;
+    transition: 0.4s;
+
+}
+
+p, h3, h4 {
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+
+.game-list {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+.game-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 220px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: 0.2s;
+}
+
+.game-card:hover {
+    background: #222;
+    transform: scale(1.03);
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #FFD700;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e6c200;
+}
+
+
+hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 20px 0;
+}
+
+
+/* -------- CSS BASE --------*/
+
+.topo {
+    background: #111;
+    padding: 15px 0;
+    box-shadow: 0 0 10px #000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.menu a:hover {
+    background: rgba(255, 215, 0, 0.2);
+    text-shadow: 0 0 8px #FFD700;
+}
+
+.logout {
+    color: #FF5555 !important;
+}
+
+
+.conteudo {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* -------- CSS DEPOSITAR --------*/
+
+.deposito-titulo {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #FFD700;
+}
+
+.deposito-saldo {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.deposito-saldo-valor {
+    color: #FFD700;
+}
+
+.deposito-form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 auto;
+    gap: 15px;
+    padding: 15px;
+    background-color: #111;
+    border: 1px solid #C7A64F;
+    border-radius: 8px;
+}
+
+.deposito-label {
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.deposito-input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #C7A64F;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.deposito-input:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+.deposito-btn {
+    background: linear-gradient(135deg, #FFF6A9, #FFD700, #E6B500);
+    color: #000;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 10px #c7a64f;
+    transition: 0.3s;
+}
+
+.deposito-btn:hover {
+    background: #e6c200;
+}
+
+/* -------- CSS ROLETA --------*/
+
+
+.roulette-title {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.saldo-info {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.roulette-form {
+    background-color: #111;
+    border: 1px solid #C7A64F;
+    border-radius: 8px;
+    width: 360px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.choice-label {
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.choice-options {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.choice-options label {
+    margin-right: 10px;
+}
+
+.warning {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #bbbbbb;
+}
+
+.bet-input {
+    padding: 10px;
+    background-color: #1f1f1f;
+    border: 1px solid #C7A64F;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.bet-input:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+.roulette-button {
+    background: linear-gradient(135deg, #FFF6A9, #FFD700, #E6B500);
+    color: #000;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px #c7a64f;
+    transition: 0.3s;
+}
+
+.roulette-button:hover {
+    background: #e6c200;
+}
+
+.result-box {
+    margin-top: 25px;
+    background-color: #1a1a1a;
+    padding: 12px 18px;
+    display: inline-block;
+    border-radius: 6px;
+    border: 1px solid #444;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.num.zero {
+    color: #00ff62;
+}
+
+.num.par {
+    color: #ffffff;
+}
+
+.num.impar {
+    color: #ff4d4d;
+}
+
+.win-text {
+    color: #00ff62;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.lose-text {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.new-balance {
+    margin-top: 5px;
+    color: #e0e0e0;
+}
+
+/* -------- CSS  CAÇA NIQUEL--------*/
+
+.slot-titulo {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.slot-saldo {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 18px;
+}
+
+.slot-tabela-titulo {
+    text-align: center;
+    color: #C7A64F;
+    margin-top: 15px;
+}
+
+.slot-tabela {
+    text-align: center;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.slot-visores {
+    font-size: 4em;
+    padding: 20px;
+    border: 2px solid #C7A64F;
+    margin: 20px auto;
+    background-color: #1a1a1a;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.slot-simbolo {
+    margin: 0 15px;
+}
+
+.slot-formulario {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #C7A64F;
+}
+
+.slot-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.slot-etiqueta {
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.slot-input {
+    padding: 10px;
+    background-color: #1f1f1f;
+    border: 1px solid #C7A64F;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.slot-input:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+.slot-botao {
+    background: linear-gradient(135deg, #FFF6A9, #FFD700, #E6B500);
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px #c7a64f;
+    transition: 0.3s;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.slot-botao:hover {
+    background: #e6c200;
+}
+
+
+
+.slot-resultado-titulo {
+    text-align: center;
+    color: #C7A64F;
+}
+
+.slot-vitoria {
+    color: #00ff62;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.slot-derrota {
+    color: #ff4d4d;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.slot-novosaldo {
+    text-align: center;
+    color: #e0e0e0;
+    margin-top: 10px;
+}
+
+/* -------- CSS  CARA OU COROA--------*/
+
+.moeda-titulo {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.moeda-saldo {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.moeda-form {
+    background-color: #111;
+    border: 1px solid #C7A64F;
+    border-radius: 8px;
+    width: 360px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.moeda-label {
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.moeda-radio-grupo {
+    color: #e0e0e0;
+}
+
+.moeda-radio-grupo label {
+    margin-left: 5px;
+}
+
+.moeda-input {
+    padding: 10px;
+    background-color: #1f1f1f;
+    border: 1px solid #C7A64F;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.moeda-input:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+.moeda-btn {
+    background: linear-gradient(135deg, #FFF6A9, #FFD700, #E6B500);
+    color: #000;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px #c7a64f;
+    transition: 0.3s;
+}
+
+.moeda-btn:hover {
+    background: #e6c200;
+}
+
+
+.moeda-resultado-titulo {
+    text-align: center;
+    color: #FFD700;
+}
+
+.moeda-resultado-box {
+    background-color: #1a1a1a;
+    padding: 12px 18px;
+    display: inline-block;
+    border-radius: 6px;
+    border: 1px solid #444;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.moeda-win {
+    color: #00ff62;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.moeda-lose {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.moeda-novosaldo {
+    margin-top: 8px;
+    color: #e0e0e0;
+}

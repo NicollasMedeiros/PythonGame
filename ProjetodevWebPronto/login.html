@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/style.css">
+    <h2 class="login_titulo">Acessar sua Conta</h2>
+    
+    <form class="form_login" method="POST" action="{{ url_for('login') }}">
+        <div class="login">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        
+        <div class="senha">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <button class="botao_entrar" type="submit">Entrar</button>
+    </form>
+    
+    <div class="iniciar_cadastro">
+        <p>Ainda não tem conta? <a href="{{ url_for('cadastro') }}">Crie uma aqui</a>.</p>
+        {% endblock %}
+    </div>

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Jogo da Moeda{% endblock %}
+
+{% block content %}
+
+
+    <h2 class="moeda-titulo">Jogo da Moeda (Cara ou Coroa)</h2>
+    
+    <p class="moeda-saldo">Seu Saldo Atual: <strong>R$ {{ current_user.saldo|round(2) }}</strong></p>
+    
+    <hr>
+    
+    <form method="POST" action="{{ url_for('coin_flip') }}" class="moeda-form">
+        
+        <div class="moeda-radio-grupo">
+            <label class="moeda-label">Sua Escolha:</label><br>
+            <input type="radio" id="cara" name="escolha" value="cara" required>
+            <label for="cara">Cara</label><br>
+            
+            <input type="radio" id="coroa" name="escolha" value="coroa">
+            <label for="coroa">Coroa</label>
+        </div>
+        
+        <div>
+            <label for="aposta" class="moeda-label">Valor da Aposta (R$):</label>
+            <input type="number" step="0.01" min="0.01" id="aposta" name="aposta" required class="moeda-input">
+        </div>
+        
+        <button type="submit" class="moeda-btn">Lançar Moeda!</button>
+    </form>
+    
+    <hr>
+
+    {% if resultado_jogo %}
+        <h3 class="moeda-resultado-titulo">Resultado do Lançamento:</h3>
+        
+        <p class="moeda-resultado-box">
+            A moeda deu: <strong>{{ resultado_jogo.lancamento|upper }}</strong>.
+        </p>
+        
+        {% if resultado_jogo.vitoria %}
+            <p class="moeda-win">VOCÊ GANHOU!</p>
+        {% else %}
+            <p class="moeda-lose">VOCÊ PERDEU!</p>
+        {% endif %}
+        
+        <p class="moeda-novosaldo">Seu novo saldo é R$ {{ current_user.saldo|round(2) }}.</p>
+    {% endif %}
+
+{% endblock %}

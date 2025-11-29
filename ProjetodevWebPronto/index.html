@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Principal | Cassino Online{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/style.css">
+    <h2 class="bemvindo">Bem-vindo ao Nosso Cassino!</h2>
+
+    {% if current_user.is_authenticated %}
+        <p>Olá, {{ current_user.username }}! Seu saldo atual é: <strong>R$ {{ current_user.saldo|round(2) }}</strong></p>
+        
+        <hr>
+        
+        <h3>Escolha seu Jogo:</h3>
+        <div class="game-list">
+            <div class="game-card">
+                <h4>Jogo da Moeda</h4>
+                <p>Aposte no cara ou coroa!</p>
+                <a href="{{ url_for('coin_flip') }}" class="btn">Jogar</a> 
+            </div>
+            
+            <div class="game-card">
+                <h4>Roleta Simples</h4>
+                <p>Aposte em números pares ou ímpares.</p>
+                <a href="{{ url_for('simple_roulette') }}" class="btn">Jogar</a>
+            </div>
+            
+            <div class="game-card">
+                <h4>Caça-Níquel</h4>
+                <p>Aposte e gire os 3 cilindros!</p>
+                <a href="{{ url_for('slot_machine') }}" class="btn">Jogar</a> 
+            </div>
+
+        </div>
+
+    {% else %}
+        <p class="criar" >Faça o login ou crie uma conta para começar a jogar e depositar seu saldo.</p>
+        <p><a class="fazer_login" href="{{ url_for('login') }}">Entrar na conta</a>  <a class="fazer_cadastro" href="{{ url_for('cadastro') }}">Criar nova conta</a></p>
+    {% endif %}
+
+{% endblock %}

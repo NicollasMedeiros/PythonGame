@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Depositar Saldo{% endblock %}
+
+{% block content %}
+
+<h2 class="deposito-titulo">Adicionar Dinheiro à Conta</h2>
+
+<p class="deposito-saldo">
+    Seu Saldo Atual:
+    <strong class="deposito-saldo-valor">R$ {{ saldo|round(2) }}</strong>
+</p>
+
+<form class="deposito-form" method="POST" action="{{ url_for('adicionar_saldo') }}">
+    
+    <label for="valor" class="deposito-label">Valor do Depósito:</label>
+    
+    <input 
+        type="number" 
+        step="0.01" 
+        min="0.01" 
+        id="valor" 
+        name="valor"
+        class="deposito-input"
+        required
+    >
+
+    <button type="submit" class="deposito-btn">Adicionar Saldo</button>
+
+</form>
+
+{% endblock %}

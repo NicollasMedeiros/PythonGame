@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Caça-Níquel{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/style.css">
+
+    <h2 class="slot-titulo">Caça-Níquel Simples</h2>
+    
+    <p class="slot-saldo">Seu Saldo Atual: <strong>R$ {{ current_user.saldo|round(2) }}</strong></p>
+    
+    <hr>
+
+    <h3 class="slot-tabela-titulo">Tabela de Pagamento</h3>
+    <p class="slot-tabela">💎💎💎 = 10x | 🍒🍒🍒 = 5x | 🍋🍋🍋 = 3x</p>
+    
+    <div class="slot-visores">
+        {% if resultado_jogo %}
+            {% for simbolo in resultado_jogo.simbolos %}
+                <span class="slot-simbolo">{{ simbolo }}</span>
+            {% endfor %}
+        {% else %}
+            <span class="slot-simbolo">?</span>
+            <span class="slot-simbolo">?</span>
+            <span class="slot-simbolo">?</span>
+        {% endif %}
+    </div>
+    
+    <form method="POST" action="{{ url_for('slot_machine') }}" class="slot-formulario">
+        
+        <div class="slot-grupo">
+            <label for="aposta" class="slot-etiqueta">Valor da Aposta (R$):</label>
+            <input type="number" step="0.01" min="0.01" id="aposta" name="aposta" required class="slot-input">
+        </div>
+        
+        <button type="submit" class="slot-botao">GIRAR</button>
+    </form>
+    
+    <hr>
+
+    {% if resultado_jogo %}
+        <h3 class="slot-resultado-titulo">Resultado:</h3>
+        
+        {% if resultado_jogo.vitoria %}
+            <p class="slot-vitoria">Você ganhou R$ {{ resultado_jogo.ganho_liquido|round(2) }}!</p>
+        {% else %}
+            <p class="slot-derrota">Você perdeu R$ {{ resultado_jogo.aposta|round(2) }}.</p>
+        {% endif %}
+        
+        <p class="slot-novosaldo">Seu novo saldo é R$ {{ current_user.saldo|round(2) }}.</p>
+    {% endif %}
+
+{% endblock %}
